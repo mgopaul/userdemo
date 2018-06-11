@@ -1,10 +1,14 @@
 Springboot application to create a User and add messages using spring MVC , in memory database and angularjs
 
 TODO:
-1. add tests
+1. user authentication
 
-2. Persisting of user and messages not working , to fix
+2. add tests
 
-3. Add comments related to messages
+3. Persisting of user and messages not working , to fix
 
-4. use Nosql to store details instead of DB
+4. Add comments related to messages
+
+5. use Nosql to store details instead of DB
+
+
