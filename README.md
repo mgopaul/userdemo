@@ -6,3 +6,5 @@ TODO:
 2. Persisting of user and messages not working , to fix
 
 3. Add comments related to messages
+
+4. use Nosql to store details instead of DB
