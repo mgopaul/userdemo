@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="ISO-8859-1">
+  <title>Main Page</title>
+</head>
+<body ng-app="userdemo">
+<hr/>
+<div class="container" ng-controller="UserController">
+  <div class="row">
+    <label>User</label> <input type="text" ng-model="userDao.username" class="input-sm spacing"/>
+    <label>User Email</label> <input type="text" ng-model="userDao.email" class="input-sm spacing"/>
+    <label>Messages</label> <input type="text" ng-model="messages" ng-list class="input-sm custom-width spacing"
+                                   placeholder="use comma to separate messages"/>
+    <button ng-click="saveUser()" class="btn btn-sm btn-info">Save User</button>
+  </div>
+  <hr/>
+  <div class="row">
+    <p>{{allUsers | json}}</p>
+  </div>
+  <hr/>
+  <div class="row" ng-repeat="user in allUsers">
+    <div class="">
+      <h3>{{user.username}}</h3>
+      <span ng-repeat="Message in user.messageDaos" class="spacing">{{message.content}}</span>
+    </div>
+  </div>
+</div>
+</body>
+<script src="js/lib/angular.min.js"></script>
+<script src="js/lib/ui-bootstrap-tpls-2.5.0.min.js"></script>
+<script src="js/app/app.js"></script>
+<script src="js/app/UserController.js"></script>
+<script src="js/app/UserService.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="css/app/app.css"/>
+</html>

@@ -1,0 +1,11 @@
+body{
+  background-color: azure;
+}
+
+input.custom-width{
+   width : 200px;
+}
+
+input.spacing{
+  margin-right:5px;
+}
